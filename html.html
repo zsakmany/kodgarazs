@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Röviden a HTML kódról</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <h1>Röviden a HTML kódról</h1>
+  <h2>Mi is az a HTML?</h2>
+  <p>A HTML egy leíró, vagy jelölő nyelv, ami a weboldalak struktúráját határozza meg. Olyan elemekből, vagy "tag"-ekből áll
+    mint a
+    <em>p</em>,
+    <em>img</em>,
+    <em>table</em>,
+    <em>h1</em>,
+    <em>h2</em>,
+    <em>h3</em>... Ezek segítségével határozzuk meg, hogy a weboldalunknak milyen építőkövei legyenek.
+    <br/> A wikipédián
+    <a href="https://hu.wikipedia.org/wiki/HTML">itt</a> tudtok a HTML-ről olvasni egy kicsit. Van egy külön oldal a tageknek is, ahol mindegyikről külön meg tudjátok
+    nézni mit csinál azt pedig
+    <a href="https://hu.wikipedia.org/wiki/HTML-elem">itt</a> éritek el.</p>
+  <h2>Egy kis CSS</h2>
+  <p>Ha a HTML struktúrát, akkor a CSS (Cascading Style Sheets) adja a oldalanak a stílusát, vagyis a színeket, betűtípusokat,
+    formázást, stb. (És a műkődést pedig a JS adja)
+    <br/>
+    <img width="350px" src="https://image.slidesharecdn.com/htmlcss-161121095145/95/html-and-css-crash-course-2-638.jpg?cb=1479721969"
+      alt="HTML, CSS, JavaScript">
+    <br/> CSS-t meg lehet adni a HTML kódban, vagy külön egy
+    <em>.css</em> fájlban is. Ha JS Bint használunk, a külön CSS fülön található kódot automatikusan ráhuzza a HTML-re, így olyan
+    mintha külön fájlt használnánk. Nézzétek meg az ottani kódot, és írjátok át az értékeket.</p>
+  <p>A CSS-ben sok, de nem végtelen tulajdonság van. Ezeket főleg azoknak kell nagyon jól tudni, akik úgynevezett site-builddel
+    foglalkoznak. Az ő feladatuk, hogy az oldal úgy nézzen ki minden böngészőben, ahogy a grafikusok megálmodták.</p>
+  <h2>A canvas</h2>
+  <p>Eddig Sanyi, a kód szörny segítségével használtuk a canvas HTML elemet, de most már ideje, hogy saját honlapot csináljunk.
+    A következő kódrészlettel létre tudjuk hozni a saját rajzvászonunkat:</p>
+  <pre>
+    <!--
+      A HTML kódban így csinálunk kommentet. Ezt a böngészőben nem fogjátok látni, csak a forráskódban.
+      A pre tag formázás nélkül jeleníti meg a tartalmát. Ezért látszik kicsit írógép szerűnek. A sok fura &lt; és &gt; pedig azért kell, hogy a böngésző a kacsacsőröket megjelenítse. Enélkül megpróbálná őket értelmezni, amit nem tudna.
+    -->
+    &lt;canvas id="canvas" width="400px" height="300px"&gt;&lt;/canvas&gt;
+    &lt;script&gt;
+      var c = document.getElementById('canvas').getContext('2d');
+
+      c.fillStyle = 'green';
+      c.fillRect(10, 10, 100, 100);
+    &lt;/script&gt;
+  </pre> Ha a kódrészletet a beillesztitek a saját honlapotokba ezt fogjátok látni:
+  <canvas id="canvas" width="400" height="300"></canvas>
+  <script>
+    var c = document.getElementById('canvas').getContext('2d');
+
+    c.fillStyle = 'green';
+    c.fillRect(10, 10, 100, 100);
+  </script>
+  <h2>Ezt az oldalt amúgy eléirtek JS Binen
+    <a href="https://jsbin.com/wunafux/edit?html,css,output">ezen</a> az címen.</h2>
+</body>
+
+</html>
